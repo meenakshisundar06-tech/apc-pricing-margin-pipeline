@@ -92,13 +92,7 @@ Built as a Databricks AI/BI Dashboard with two pages.
 
 ```
 ├── README.md
-├── data/            # synthetic source CSVs
-├── sql/
-│   ├── 01_bronze_ingestion.sql
-│   ├── 02_profiling.sql
-│   ├── 03_silver_cleaning.sql
-│   └── 04_gold_views.sql
-└── screenshots/
+├── 01-05 dashboard and query screenshots
 ```
 
 ---
