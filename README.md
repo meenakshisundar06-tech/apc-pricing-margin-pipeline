@@ -32,7 +32,7 @@ CSV files (4)  →  BRONZE (raw Delta tables)  →  SILVER (cleaned, validated) 
 | Silver | `apc_pricing_silver` | Deduplication, date parsing, casing and whitespace fixes, orphan removal, price-error correction |
 | Gold | `apc_pricing_gold` | Five business views: margin trend, renewal pipeline, customer 360, monthly revenue, negative-margin analysis |
 
-![Unity Catalog schemas](screenshots/03-unity-catalog-schemas.png)
+![Unity Catalog schemas](03-unity-catalog-schemas.jpeg)
 
 ---
 
@@ -49,7 +49,7 @@ The raw data has **22 deliberately planted issue types (132 bad rows)**, mirrori
 
 Transactions went from **2,216 bronze rows to 2,148 clean silver rows**. Negative-margin rows were **kept and flagged** (`is_negative_margin`) rather than deleted, because they are a real business finding, not bad data.
 
-![Silver transactions validation](screenshots/04-silver-transactions-result.png)
+![Silver transactions validation](04-silver-transactions-result.png)
 
 ---
 
@@ -60,7 +60,7 @@ Transactions went from **2,216 bronze rows to 2,148 clean silver rows**. Negativ
 3. **29 contracts pending renewal put about $10.07M of revenue at risk.**
 4. **80 customers, about $32.9M lifetime revenue, 15.79% blended margin.**
 
-![Margin by business unit and year](screenshots/05-gold-margin-by-bu.png)
+![Margin by business unit and year](05-gold-margin-by-bu.jpeg)
 
 ---
 
@@ -68,13 +68,13 @@ Transactions went from **2,216 bronze rows to 2,148 clean silver rows**. Negativ
 
 Built as a Databricks AI/BI Dashboard with two pages.
 
-**Overview:** monthly margin trend, top 10 renewal-risk contracts, loss concentration heatmap (tier × business unit), yearly margin trend.
+**Overview:** monthly margin trend, top 10 renewal-risk contracts, total loss by customer tier and business unit, yearly margin trend.
 
-![Dashboard overview](screenshots/01-dashboard-overview.png)
+![Dashboard overview](01-dashboard-overview.jpeg)
 
 **Customer detail:** a sortable customer 360 table.
 
-![Customer detail](screenshots/02-dashboard-customer-detail.png)
+![Customer detail](02-dashboard-customer-detail.jpeg)
 
 ---
 
